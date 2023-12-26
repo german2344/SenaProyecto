@@ -1,0 +1,201 @@
+// //variables definidas en app.scss en :root
+ $header-bg: var(--bg);
+ $main-color: var(--main-color);
+ $black: var(--black);
+ $border: var(--border);
+
+
+.header {
+  background: $header-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-bottom: $border;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+
+  .logo img {
+    height: 5rem;
+  }
+
+  .navbar {
+    text-align: center;
+    
+    a {
+      font-size: large;
+      color: #fff;
+      &:hover{
+        color: $main-color;
+        border-bottom: 0.1rem solid $main-color;
+        padding-bottom: 0.5rem;
+      }
+      &.active {
+        color: $main-color; // Cambia $active-color al color que desees para el enlace activo
+        border-bottom: 0.1rem solid $main-color;
+        padding-bottom: 0.5rem;
+    }
+    }
+  }
+
+  .cont-header-iconos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+  
+    #search-btn,#cart-btn{
+ 
+      &:hover {
+        color: $main-color;
+      }
+    }
+    
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .search-form {
+    z-index: 1000;
+    position: absolute;
+    top: 100%;
+    right: 1%;
+    background: #fff;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: top;
+
+    &.active {
+      transform: scaleY(1);
+    }
+
+     input {
+      border: none;
+      outline: none;
+      margin-left: 3%;
+       height: 100%;
+       width: 80%;
+       font-size: 1.2rem;
+       color: $black;
+       padding: 1rem;
+       text-transform: none;
+     }
+
+     .cont-icon-search{
+      border-left: 1px solid rgb(199, 189, 189);
+      border-radius: 0;
+       cursor: pointer;
+       font-size: 1.7rem;
+       color: $black;
+       width: 15%;
+       text-align: center;
+       &:hover {
+         color: $main-color;
+       }
+       
+     }
+  }
+
+  .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+
+    &.active {
+      right: 0;
+    }
+
+    .cart-item {
+      position: relative;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      .fa-times {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        color: $black;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+
+      img {
+        height: 7rem;
+      }
+
+      .content {
+        h3 {
+          font-size: 2rem;
+          color: $black;
+          padding-bottom: 0.5rem;
+        }
+
+        .price {
+          font-size: 1.5rem;
+          color: $main-color;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cont-header-iconos {
+      #menu-btn {
+        display: inline-block;
+      }
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      display: block;
+      right: -120%;
+      background: #fff;
+      width: 100%;
+    
+      height: 100vh;
+
+      &.active {
+        right: 0;
+      }
+
+      a {
+        color: $black;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.3rem;
+        font-size: 1.4rem;
+      }
+    }
+
+    .search-form {
+      width: 90%;
+      right: 2rem;
+    }
+  }
+}

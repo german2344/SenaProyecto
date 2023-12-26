@@ -1,0 +1,108 @@
+@import '../../shared/variables';
+
+
+.home {
+  margin-top: 5rem;
+  min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 2, 0, .6), rgba(0, 0, 2, .6), rgba(0, 0, 0, .45) ), url(../../../images/chef.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+    .content {
+      padding: 0 4rem;
+      margin: 0;
+      
+      h3 {
+        font-size: $font-size-large;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white;
+      }
+      
+      p {
+        font-size: $font-size-small;
+        font-weight: $font-weight-light;
+        line-height: 1.0;
+        padding: 1rem 0;
+        color: $green;
+      }
+    }
+  }
+  
+  @import '../../shared/btn';
+
+
+.about {  
+  .row {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: $black;
+    flex-wrap: wrap;
+
+    .image {
+      width: 100%;
+      padding: 1rem;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .content {
+      width: 100%;
+      padding: 2rem;
+
+      h3 {
+        font-size: $font-size-medium;
+        color: $white;
+      }
+
+      p {
+        font-size: $font-size-small;
+        color: #ccc;
+        padding: 1rem 0;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .row {
+      .image {
+        width: 50%;
+      }
+
+      .content {
+        width: 50%;
+      }
+    }
+  }
+}
+  
+  @media (max-width: 768px) {
+    .home {
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+      
+      .content {
+        h3 {
+          font-size: $font-size-medium;
+        }
+        
+        p {
+          font-size: $font-size-small;
+        }
+      }
+    }
+  }
+  @import '../../shared/opinion';
+  @import '../../shared/productos';
+  @import 'contacto';
+  @import '../../menu';
+  @import 'recetas';

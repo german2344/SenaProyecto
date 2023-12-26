@@ -1,0 +1,74 @@
+.heading {
+  margin: 3%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.btn {
+  margin-top: 0.6rem;
+  display: inline-block;
+  padding: 0.3rem 1.3rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: var(--main-color);
+  cursor: pointer;
+}
+.btn:hover {
+  letter-spacing: 0.1rem;
+}
+
+/* para card recetas  home*/
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 18rem));
+  gap: 1rem;
+  justify-content: center;
+}
+.blogs .box-container .box {
+  border: var(--border);
+  height: 100%;
+}
+.blogs .box-container .box .image {
+  height: 11rem;
+  overflow: hidden;
+  width: 100%;
+}
+.blogs .box-container .box .image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.blogs .box-container .box .image img:hover {
+  transform: scale(1.2);
+}
+.blogs .box-container .box .content {
+  padding: 0.6rem;
+  text-align: center;
+}
+.blogs .box-container .box .content .title {
+  font-size: 1.3rem;
+  color: #fff;
+}
+.blogs .box-container .box .content .title:hover {
+  color: var(--main-color);
+}
+.blogs .box-container .box .content span {
+  color: var(--main-color);
+  display: block;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+}
+.blogs .box-container .box .content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 1rem 0;
+}
+
+/*# sourceMappingURL=recetas.css.map */

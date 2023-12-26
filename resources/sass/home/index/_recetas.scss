@@ -1,0 +1,62 @@
+/* para card recetas  home*/
+
+.blogs {
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2rem, 18rem));
+        gap:1rem;
+        justify-content: center;
+
+    .box{
+        border:var(--border);
+        height: 100%;
+        .image{
+            height: 11rem;
+            overflow:hidden;
+            width: 100%;
+            img{
+                height: 100%;
+               object-fit: cover;
+               width: 100%;
+                 &:hover{
+                  transform: scale(1.2);
+                 }
+            }
+        }
+        .content{
+           padding:.6rem;
+           text-align: center;
+           .title{
+               font-size: 1.3rem;
+               color:#fff;
+               &:hover{
+                   color:var(--main-color);
+               }
+           }
+           span{
+               color:var(--main-color);
+               display: block;
+               padding-top: .5rem;
+               font-size: 1rem;
+           }
+           p{
+              font-size: 1rem;
+              line-height: 1.8;
+              color:#ccc;
+              padding:1rem 0;
+
+            //   white-space: normal;
+            //   overflow: hidden;
+            //   text-overflow: ellipsis;
+            //   max-height: 7rem;
+          }
+       }
+    }
+
+
+
+
+
+
+    }
+}

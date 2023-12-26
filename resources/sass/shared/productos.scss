@@ -1,0 +1,72 @@
+/* Productos home */
+@import 'heading';
+@import 'modalDetalle';
+.products {
+    margin: auto 2rem;
+    .box-container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 18rem));
+        gap:1rem;
+        .box{
+        text-align: center;
+        border:var(--border);
+        padding: .7rem  0;
+        height: 100%;
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            margin-bottom: 5%;
+                a{
+                border-radius: 30%;
+                height: 3.5rem;
+                width: 3.5rem;
+                font-size: 1.3rem;
+                line-height: 3.4rem;
+                border:var(--border);
+                color:#fff;
+                margin:.3rem;
+                    &:hover{
+                        background:var(--main-color);
+                    }
+                }
+            }
+        .image{
+            padding: 0 2rem;
+            height: 10rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .content{
+                h3{
+                    padding-top: 5%;
+                    color:#fff;
+                    font-size: 1.4rem;
+                }
+                p{
+                    color: #fff;
+                    font-size: .9rem;
+                }
+                .stars{
+                    padding: 1rem;
+                    i{
+                    font-size: 1.4rem;
+                    color: var(--main-color);
+                    }
+                }
+                .price{
+                    color:#fff;
+                    font-size: 1.5rem;
+                    span{
+                        // text-decoration: line-through;
+                        font-weight: lighter;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

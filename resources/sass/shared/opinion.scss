@@ -1,0 +1,63 @@
+/*  opinion home */
+@import 'heading';
+@import 'modal';
+
+    .review {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        // padding: 70px;
+        // color: #fff;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+        
+        h1{
+            span{
+                color: rgb(51, 137, 51);
+                font-family: mv boli;
+            }
+        }
+        .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap:30px;
+            .box{
+                max-width: 90%;
+                border-radius: 2%;
+                .quote{
+                    align-self: flex-start;
+                }
+                border:var(--border);
+                text-align: center;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    font-size: 1.2rem;
+                    color:#ccc;
+                    padding:1.4rem 0;
+                }
+                .user-img{
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                h3{
+                    padding:.5rem 0;
+                    font-size: 1.3rem;
+                    color:#fff;
+
+                }
+                .stars{
+                    i{
+                        font-size: 1rem;
+                        color:var(--main-color);
+
+                    }
+                }
+            }
+        }
+    }
+

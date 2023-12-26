@@ -1,0 +1,45 @@
+.contDetalle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    .imgs{
+        width: 50%;
+        height: 90%;
+        padding: 2% 4%;
+        .imgMain{
+            width: 100%;
+            background-color: red;
+            height: 400px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .imgsPrevs{
+            width: 100%;
+            height: 30%;
+        }
+    }
+    .descriptionProduct{
+     
+        width: 50%;
+        padding: 3%;
+        overflow-y: scroll;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .contDetalle{
+        flex-direction: column;
+        .imgs{
+          
+            width: 100%;
+        }
+         .descriptionProduct {
+         
+            width: 100%; /* Cambia el ancho a 100% en pantallas pequeñas */
+        }
+    }
+}
