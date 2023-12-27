@@ -4,7 +4,7 @@
 ### Instalation (dependencias)
 
 ```
-git clone https://github.com/TCLJOHANT/senakicht.git
+git clone https://github.com/german2344/SenaProyecto.git
 ```
 ```
 composer install
